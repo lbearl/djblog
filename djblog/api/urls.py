@@ -1,6 +1,6 @@
 from django.conf.urls.defaults import *
 from piston.resource import Resource
-from djblog.api.handlers import Blog, Comment
+from djblog.api.handlers import BlogHandler, CommentHandler
 
 product_handler = Resource(ProductHandler)
 registry_handler = Resource(RegistryHandler)
