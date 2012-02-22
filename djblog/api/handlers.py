@@ -1,5 +1,5 @@
 from piston.handler import BaseHandler
-from djblog.blog import Blog, Comment
+from djblog.blog.models import Blog, Comment
 from django.contrib.auth.models import User
 
 class BlogHandler(BaseHandler):
