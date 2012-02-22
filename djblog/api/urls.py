@@ -1,6 +1,6 @@
 from django.conf.urls.defaults import *
 from piston.resource import Resource
-from blisst.api.handlers import ProductHandler, RegistryHandler
+from djblog.api.handlers import Blog, Comment
 
 product_handler = Resource(ProductHandler)
 registry_handler = Resource(RegistryHandler)
