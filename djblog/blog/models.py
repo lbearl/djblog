@@ -12,4 +12,5 @@ class Comment(models.Model):
     email = models.EmailField()
     comment = models.TextField()
     moderated = models.BooleanField()
+    blog = models.ForeignKey(Blog)
 
