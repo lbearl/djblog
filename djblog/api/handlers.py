@@ -9,6 +9,7 @@ class BlogHandler(BaseHandler):
     allowed_methods = ('GET', 'PUT', 'POST', 'DELETE')
     model = Blog
     fields = ('blog_title', 'author', 'blog_summary', 'blog_entry')
+    exclude = ('_state', 'is_active', 'email', 'is_superuser', 'is_staff', 'last_login', 'password', 'id')
     
     def read(self, request, blog_title=None):
         base = Blog.objects
@@ -33,6 +34,7 @@ class BlogAndCommentHandler(BaseHandler):
     allowed_methods = ('GET')
     model = Blog
     fields = ('blog_name', 'author', 'blog_summary', 'blog_entry', ('comment', ()))
+    exclude = ('_state', 'is_active', 'email', 'is_superuser', 'is_staff', 'last_login', 'password', 'id')
 
     def read(self, request, blog_title=None):
         base = Blog.objects
